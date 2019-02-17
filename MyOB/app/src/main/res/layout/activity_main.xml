@@ -27,6 +27,10 @@
                         app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
                         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
                         android:textColor="@android:color/holo_orange_dark" android:layout_weight="1"/>
+                <Button
+                        android:text="Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/bt_denik" android:layout_weight="1"/>
                 <TextView
                         android:text="Orientační běh (zkratka OB, angl. Orienteering) je sport založený na schopnosti orientace v terénu s mapou a buzolou. Účastníci na startu obdrží mapu, obvykle terénu, který neznají. Na mapě jsou vyznačena kontrolní stanoviště (kontroly), která mají účastníci nalézt v určeném pořadí. Závodní orientační běh je sport, při kterém závodníci postupně co nejrychleji oběhnou všechny kontroly na své trati. Tratě jsou připraveny v různé obtížnosti a délce a rozděleny do tzv. kategorií podle pohlaví a věku závodníků např. D35 (ženy nad 35 let) nebo H18 (muži do 18 let). Elitní kategorie přístupné všem bez rozdílu věku jsou H21 a D21. Závodníci při OB běhají většinou mimo cesty a překonávají terénní překážky.
 
