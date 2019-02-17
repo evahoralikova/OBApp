@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         txt_header2=(TextView) findViewById(R.id.textView_header2);
         txt_content2=(TextView) findViewById(R.id.textView_content2); */
         bt_denik = (Button) findViewById(R.id.bt_denik);
-        bt_prehled = (Button) findViewById(R.id.bt_prehled);
+        //bt_prehled = (Button) findViewById(R.id.bt_prehled);
 
 
         bt_denik.setOnClickListener(new View.OnClickListener() {
@@ -38,15 +38,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        bt_prehled.setOnClickListener(new View.OnClickListener() {
+        /*bt_prehled.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent  = new Intent (v.getContext(), Overview_Activity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView)
+        final BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener
                 (new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -56,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
                         switch (item.getItemId()) {
                             case R.id.action_item1:
                                 selectedFragment = ItemOneFragment.newInstance();
+                                Intent intent  = new Intent (bottomNavigationView.getContext(), Overview_Activity.class);
+                                startActivity(intent);
+                                break;
+                            case R.id.action_item2:
+                                selectedFragment = ItemTwoFragment.newInstance();
+                                Intent intent2  = new Intent (bottomNavigationView.getContext(), Main2Activity_denik.class);
+                                startActivity(intent2);
                                 break;
                         }
                         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
