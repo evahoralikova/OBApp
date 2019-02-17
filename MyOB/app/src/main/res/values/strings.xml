@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyOB</string>
+    <string name="title_activity_overview_">Overview_Activity</string>
 </resources>

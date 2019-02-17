@@ -18,6 +18,11 @@
         </activity>
         <activity android:name=".Main2Activity_denik">
         </activity>
+        <activity
+                android:name=".Overview_Activity"
+                android:label="@string/title_activity_overview_"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     Button bt_denik;
+    Button bt_prehled;
     TextView txt_header1;
     TextView txt_content1;
     TextView txt_header2;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         txt_header2=(TextView) findViewById(R.id.textView_header2);
         txt_content2=(TextView) findViewById(R.id.textView_content2);
         bt_denik = (Button) findViewById(R.id.bt_denik);
+        bt_prehled = (Button) findViewById(R.id.bt_prehled);
+
 
         bt_denik.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,5 +33,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        bt_prehled.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent (v.getContext(), Overview_Activity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
