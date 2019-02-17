@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="81dp">
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <TextView
+                        android:text="O orientačním běhu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="113dp"
+                        android:id="@+id/textView_header1"
+                        tools:layout_editor_absoluteY="-2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:textColor="@android:color/holo_orange_dark" android:layout_weight="1"/>
+                <TextView
+                        android:text="Orientační běh (zkratka OB, angl. Orienteering) je sport založený na schopnosti orientace v terénu s mapou a buzolou. Účastníci na startu obdrží mapu, obvykle terénu, který neznají. Na mapě jsou vyznačena kontrolní stanoviště (kontroly), která mají účastníci nalézt v určeném pořadí. Závodní orientační běh je sport, při kterém závodníci postupně co nejrychleji oběhnou všechny kontroly na své trati. Tratě jsou připraveny v různé obtížnosti a délce a rozděleny do tzv. kategorií podle pohlaví a věku závodníků např. D35 (ženy nad 35 let) nebo H18 (muži do 18 let). Elitní kategorie přístupné všem bez rozdílu věku jsou H21 a D21. Závodníci při OB běhají většinou mimo cesty a překonávají terénní překážky.
+
+Orientační běh patří do rodiny orientačních sportů, kam kromě něj patří také lyžařský OB (LOB, závod na běžkách), MTBO (závod na horských kolech) a Trail orienteering (přesná orientace)."
+                        android:layout_width="373dp"
+                        android:layout_height="937dp" android:id="@+id/textView_content1"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.506"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="84dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:baselineAligned="false"/>
+                <TextView
+                        android:text="O aplikaci"
+                        android:layout_width="match_parent"
+                        android:layout_height="123dp"
+                        android:id="@+id/textView_header2"
+                        tools:layout_editor_absoluteY="-2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:textColor="@android:color/holo_orange_dark" android:layout_weight="1"
+                />
+                <TextView
+                        android:text="Tato práce..............................................................................................................................................................................."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView_content2"
+                        app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.506"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_marginBottom="84dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline" android:layout_weight="1"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
