@@ -40,7 +40,7 @@ kategorie přístupné všem bez rozdílu věku jsou H21 a D21. Závodníci
 při OB běhají většinou mimo cesty a překonávají terénní překážky.
 Orientační běh patří do rodiny orientačních sportů, kam kromě něj
 patří také lyžařský OB (LOB, závod na běžkách), MTBO (závod na
-horských kolech) a Trail orienteering (přesná orientace)."
+horských kolech) a Trail orienteering (přesná orientace). "
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView5" android:layout_weight="1"/>
