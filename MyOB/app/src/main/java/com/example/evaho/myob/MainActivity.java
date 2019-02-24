@@ -27,21 +27,23 @@ public class MainActivity extends AppCompatActivity {
         txt_content1=(TextView) findViewById(R.id.textView_content1);
         txt_header2=(TextView) findViewById(R.id.textView_header2);
         txt_content2=(TextView) findViewById(R.id.textView_content2); */
-        bt_denik = (Button) findViewById(R.id.bt_denik);
-        //bt_prehled = (Button) findViewById(R.id.bt_prehled);
+        /*bt_denik = (Button) findViewById(R.id.bt_denik);
+        /bt_prehled = (Button) findViewById(R.id.bt_prehled);
 
 
         bt_denik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent  = new Intent (v.getContext(), Main2Activity_denik.class);
+                Intent intent  = new Intent (v.getContext(),
+Main2Activity_denik.class);
                 startActivity(intent);
             }
         });
-        /*bt_prehled.setOnClickListener(new View.OnClickListener() {
+        bt_prehled.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent  = new Intent (v.getContext(), Overview_Activity.class);
+                Intent intent  = new Intent (v.getContext(),
+Overview_Activity.class);
                 startActivity(intent);
             }
         });*/
@@ -51,31 +53,37 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView.setOnNavigationItemSelectedListener
                 (new BottomNavigationView.OnNavigationItemSelectedListener() {
                     @Override
-                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    public boolean onNavigationItemSelected(@NonNull
+                                                                    MenuItem item) {
                         Fragment selectedFragment = null;
                         switch (item.getItemId()) {
                             case R.id.action_item1:
-                                selectedFragment = ItemOneFragment.newInstance();
-                                Intent intent  = new Intent (bottomNavigationView.getContext(), Overview_Activity.class);
-                                startActivity(intent);
+                                //selectedFragment =
+                                ItemOneFragment.newInstance();
+                                selectedFragment =
+                                        OverviewFragment.newInstance();
                                 break;
                             case R.id.action_item2:
-                                selectedFragment = ItemTwoFragment.newInstance();
-                                Intent intent2  = new Intent (bottomNavigationView.getContext(), Main2Activity_denik.class);
-                                startActivity(intent2);
+                                //selectedFragment =
+                                ItemTwoFragment.newInstance();
+                                selectedFragment = DenikFragment.newInstance();
                                 break;
                         }
-                        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.linear_layout, selectedFragment);
+                        FragmentTransaction transaction =
+                                getSupportFragmentManager().beginTransaction();
+                        transaction.replace(R.id.frame_layout,
+                                selectedFragment);
                         transaction.commit();
                         return true;
                     }
                 });
 
         //Manually displaying the first fragment - one time only
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.linear_layout, ItemOneFragment.newInstance());
+        FragmentTransaction transaction =
+                getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout, OverviewFragment.newInstance());
         transaction.commit();
 
     }
 }
+
