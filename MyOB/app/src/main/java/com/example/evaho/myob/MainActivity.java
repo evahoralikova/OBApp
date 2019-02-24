@@ -11,6 +11,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Collections;
+import java.util.*;
+
+
 
 public class MainActivity extends AppCompatActivity {
     Button bt_denik;
@@ -19,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     TextView txt_content1;
     TextView txt_header2;
     TextView txt_content2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,5 +98,6 @@ Overview_Activity.class);
         transaction.commit();
 
     }
+
 }
 
