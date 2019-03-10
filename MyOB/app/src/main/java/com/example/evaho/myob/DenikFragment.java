@@ -20,6 +20,7 @@ import java.io.BufferedReader;
 public class DenikFragment extends Fragment {
 
     TextView textView_denik;
+    String m_training_info;
 
 
     public static DenikFragment newInstance() {
@@ -37,13 +38,26 @@ public class DenikFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View myView = inflater.inflate(R.layout.fragment_denik, container, false);
-        int rid = R.id.textView_denik;
-        textView_denik = (TextView) (myView.findViewById(rid));
-        new MyDownloadTask("http://ec2-35-171-129-7.compute-1.amazonaws.com/trainings", textView_denik).execute();
+        //int rid = R.id.textView_denik;
+        //textView_denik = (TextView) (myView.findViewById(rid));
+        //new MyDownloadTask("http://ec2-35-171-129-7.compute-1.amazonaws.com/trainings", textView_denik).execute();
+        setDenikTextView(myView);
         return myView;
     }
 
-    class MyDownloadTask extends AsyncTask<Void,Void,Void>
+    public void setDenikText(String newText){
+
+        m_training_info = newText;
+    }
+
+    private void setDenikTextView(View view){
+
+        int rid = R.id.textView_denik;
+        textView_denik = (TextView) (view.findViewById(rid));
+        textView_denik.setText(m_training_info);
+    }
+
+    /*class MyDownloadTask extends AsyncTask<Void,Void,Void>
     {
         private String mUrl;
         private String mContent;
@@ -83,8 +97,8 @@ public class DenikFragment extends Fragment {
                 URL url = new URL(myurl);
                 HttpURLConnection conn = (HttpURLConnection)
                         url.openConnection();
-                conn.setReadTimeout(20000 /* milliseconds */);
-                conn.setConnectTimeout(30000 /* milliseconds */);
+                conn.setReadTimeout(20000 );
+                conn.setConnectTimeout(30000);
                 conn.setRequestMethod("GET");
                 conn.setDoInput(true);
                 // Starts the query
@@ -122,6 +136,6 @@ public class DenikFragment extends Fragment {
             return total.toString();
         }
 
-    }
+    }*/
 }
 
