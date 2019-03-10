@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
+import java.util.List;
 
 
 public class DenikFragment extends Fragment {
@@ -47,7 +48,16 @@ public class DenikFragment extends Fragment {
 
     public void setDenikText(String newText){
 
-        m_training_info = newText;
+        List<Training> allTrainings = DataService.getTrainings();
+        //m_training_info = newText;
+        m_training_info = "";
+        for(Training training: allTrainings){
+            m_training_info += training.performedOn;
+            m_training_info += ",";
+            m_training_info += training.location;
+            m_training_info += "\n";
+        }
+
     }
 
     private void setDenikTextView(View view){
