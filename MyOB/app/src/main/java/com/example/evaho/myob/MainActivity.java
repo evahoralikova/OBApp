@@ -26,12 +26,7 @@ import java.util.*;
 
 
 public class MainActivity extends AppCompatActivity {
-    Button bt_denik;
-    Button bt_prehled;
-    TextView txt_header1;
-    TextView txt_content1;
-    TextView txt_header2;
-    TextView txt_content2;
+
     String m_training_info;
     TextView m_textView_denik;
 
@@ -39,34 +34,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        /*txt_header1=(TextView) findViewById(R.id.textView_header1);
-        txt_content1=(TextView) findViewById(R.id.textView_content1);
-        txt_header2=(TextView) findViewById(R.id.textView_header2);
-        txt_content2=(TextView) findViewById(R.id.textView_content2); */
-        /*bt_denik = (Button) findViewById(R.id.bt_denik);
-        /bt_prehled = (Button) findViewById(R.id.bt_prehled);
-
-
-        bt_denik.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent  = new Intent (v.getContext(),
-Main2Activity_denik.class);
-                startActivity(intent);
-            }
-        });
-        bt_prehled.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent  = new Intent (v.getContext(),
-Overview_Activity.class);
-                startActivity(intent);
-            }
-        });*/
-
-        //int rid = R.id.textView_denik;
-        //textView_denik = (TextView) (myView.findViewById(rid));
         new MyDownloadTask("http://ec2-35-171-129-7.compute-1.amazonaws.com/trainings").execute();
 
 
