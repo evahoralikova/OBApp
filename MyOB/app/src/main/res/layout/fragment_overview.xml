@@ -25,7 +25,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/textView4" android:layout_weight="1"
 
-                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"/>
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="@android:color/holo_orange_dark"/>
                 <TextView
                         android:text="Orientační běh (zkratka OB, angl.
 Orienteering) je sport založený na schopnosti orientace v terénu s
@@ -58,6 +59,16 @@ Pro usnadnění přihlášení na závody přidávám odkaz na Oris.
                         android:layout_height="wrap_content"
                         android:id="@+id/textOdkaz"
                         android:layout_weight="1"/>
+                <TextView
+                        android:text="O aplikaci"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView" android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:textColor="@android:color/holo_orange_dark"/>
+                <TextView
+                        android:text="Tato aplikace vznikala v rámci mé ročníkové práce na téma orientační sporty. Učila jsem se na ní vývoj mobilních aplikací v programovacím jazyce Java a v IDE Intellij. Na aplikaci pořád pracuji, pokusím se přidat zaznamenání trasy s pomocí GPS a pedometru. Chtěla bych vytvořit plnohodnotnou aplikaci pro orientační běžce a umístit ji na Google Play. "
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_weight="1"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
