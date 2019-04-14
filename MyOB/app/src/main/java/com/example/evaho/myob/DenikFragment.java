@@ -1,6 +1,8 @@
 package com.example.evaho.myob;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -51,6 +54,18 @@ public class DenikFragment extends Fragment {
         //textView_denik = (TextView) (myView.findViewById(rid));
         //new MyDownloadTask("http://ec2-35-171-129-7.compute-1.amazonaws.com/trainings", textView_denik).execute();
         setDenikTextView(myView);
+
+        final Button button = (Button) myView.findViewById(R.id.buttonAddTraining);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Activity currentActivity = getActivity();
+                Intent myIntent = new Intent(currentActivity, NewTrainingActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                DenikFragment.this.startActivity(myIntent);
+            }
+        });
+
         return myView;
     }
 
