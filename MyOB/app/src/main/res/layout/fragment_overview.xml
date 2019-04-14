@@ -49,8 +49,9 @@ Pro usnadnění přihlášení na závody přidávám odkaz na Oris.
 
 
                         android:layout_width="346dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView5" android:layout_weight="1"/>
+                        android:layout_height="match_parent"
+                        android:id="@+id/textView5" android:layout_weight="1"
+                        android:textSize="14sp"/>
                 <TextView
                         android:text="https://oris.orientacnisporty.cz/Prihlaseni"
                         android:autoLink="all"
@@ -58,7 +59,7 @@ Pro usnadnění přihlášení na závody přidávám odkaz na Oris.
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/textOdkaz"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1" android:textSize="18sp"/>
                 <TextView
                         android:text="O aplikaci"
                         android:layout_width="match_parent"
@@ -66,9 +67,11 @@ Pro usnadnění přihlášení na závody přidávám odkaz na Oris.
                         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
                         android:textColor="@android:color/holo_orange_dark"/>
                 <TextView
-                        android:text="Tato aplikace vznikala v rámci mé ročníkové práce na téma orientační sporty. Učila jsem se na ní vývoj mobilních aplikací v programovacím jazyce Java a v IDE Intellij. Na aplikaci pořád pracuji, pokusím se přidat zaznamenání trasy s pomocí GPS a pedometru. Chtěla bych vytvořit plnohodnotnou aplikaci pro orientační běžce a umístit ji na Google Play. "
+                        android:text="Tato aplikace vznikala v rámci mé ročníkové práce na téma orientační sporty. Učila jsem se na ní vývoj mobilních aplikací v programovacím jazyce Java a v IDE Intellij. Na aplikaci pořád pracuji, pokusím se přidat zaznamenání trasy s pomocí GPS a pedometru. Chtěla bych vytvořit plnohodnotnou aplikaci pro orientační běžce a umístit ji na Google Play.
+                                   "
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_weight="1"/>
+                        android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_weight="1"
+                        android:textSize="14sp"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

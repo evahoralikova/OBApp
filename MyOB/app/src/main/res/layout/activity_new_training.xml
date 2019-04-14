@@ -7,4 +7,135 @@
         android:layout_height="match_parent"
         tools:context=".NewTrainingActivity">
 
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                    android:text="Přidat trénink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/textView24"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                    android:fontFamily="sans-serif"
+                    android:textSize="30sp" android:textAlignment="center"
+                    android:textColor="@android:color/holo_orange_dark"/>
+            <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <TextView
+                            android:text="Datum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/textView19"
+                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif" android:textSize="24sp"
+                                android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+                </TableRow>
+                <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView
+                            android:text="Čas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/textView20"
+                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"/>
+                </TableRow>
+                <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                    <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                        />
+                    </android.support.design.widget.TextInputLayout>
+                </TableRow>
+                <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView
+                            android:text="Vzdálenost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/textView21"
+                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"/>
+                </TableRow>
+                <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                    <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif" android:textSize="24sp"
+                                android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+                </TableRow>
+                <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
+                    <TextView
+                            android:text="Tempo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/textView23"
+                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif" android:textSize="24sp"
+                                android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+                </TableRow>
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <TextView
+                            android:text="Místo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:id="@+id/textView22"
+                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"/>
+                </TableRow>
+                <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint=" " android:fontFamily="sans-serif" android:textSize="24sp"
+                                android:textAlignment="center"/>
+                    </android.support.design.widget.TextInputLayout>
+                </TableRow>
+            </TableLayout>
+            <Button
+                    android:text="Odeslat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/button2"
+                    tools:layout_editor_absoluteY="519dp"/>
+        </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>
