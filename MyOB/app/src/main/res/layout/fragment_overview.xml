@@ -48,7 +48,7 @@ Pro usnadnění přihlášení na závody přidávám odkaz na Oris.
 "
 
 
-                        android:layout_width="match_parent"
+                        android:layout_width="346dp"
                         android:layout_height="wrap_content"
                         android:id="@+id/textView5" android:layout_weight="1"/>
                 <TextView

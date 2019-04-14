@@ -1,11 +1,15 @@
 package com.example.evaho.myob;
 
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import org.w3c.dom.Text;
 
@@ -21,7 +25,9 @@ import java.util.List;
 public class DenikFragment extends Fragment {
 
     TextView textView_denik;
-    String m_training_info;
+    List<Training> m_training_info;
+
+    private Context context = null;
 
 
     public static DenikFragment newInstance() {
@@ -31,7 +37,9 @@ public class DenikFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        context = this.getContext();
     }
 
     @Override
@@ -48,23 +56,32 @@ public class DenikFragment extends Fragment {
 
     public void setDenikText(String newText){
 
-        List<Training> allTrainings = DataService.getTrainings();
-        //m_training_info = newText;
-        m_training_info = "";
-        for(Training training: allTrainings){
-            m_training_info += training.performedOn;
-            m_training_info += ",";
-            m_training_info += training.location;
-            m_training_info += "\n";
-        }
+        m_training_info = DataService.getTrainings();
 
     }
 
     private void setDenikTextView(View view){
 
-        int rid = R.id.textView_denik;
-        textView_denik = (TextView) (view.findViewById(rid));
-        textView_denik.setText(m_training_info);
+        textView_denik = (TextView) (view.findViewById(R.id.textView_denik));
+        textView_denik.setText("Ahoj2");
+
+        /*int rid = R.id.denikTableLayout;
+        TabLayout table = view.findViewById(rid);
+
+        // Create a new table row.
+        TableRow tableRow = new TableRow(view.getContext());
+
+        // Set new table row layout parameters.
+        TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
+        tableRow.setLayoutParams(layoutParams);
+
+        // Add a TextView in the first column.
+        TextView textView = new TextView(context);
+        textView.setText("Ahoj");
+        tableRow.addView(textView, 0);
+
+        table.addView(tableRow);*/
+
     }
 
     /*class MyDownloadTask extends AsyncTask<Void,Void,Void>
