@@ -53,7 +53,7 @@ public class DenikFragment extends Fragment {
         //int rid = R.id.textView_denik;
         //textView_denik = (TextView) (myView.findViewById(rid));
         //new MyDownloadTask("http://ec2-35-171-129-7.compute-1.amazonaws.com/trainings", textView_denik).execute();
-        setDenikTextView(myView);
+        //setDenikTextView(myView);
 
         final Button button = (Button) myView.findViewById(R.id.buttonAddTraining);
 
@@ -63,6 +63,7 @@ public class DenikFragment extends Fragment {
                 Intent myIntent = new Intent(currentActivity, NewTrainingActivity.class);
                 //myIntent.putExtra("key", value); //Optional parameters
                 DenikFragment.this.startActivity(myIntent);
+                setDenikTextView(v);
             }
         });
 
@@ -77,8 +78,16 @@ public class DenikFragment extends Fragment {
 
     private void setDenikTextView(View view){
 
-        textView_denik = (TextView) (view.findViewById(R.id.textView_denik));
-        textView_denik.setText("Ahoj2");
+        m_training_info = DataService.getTrainings();
+        if(m_training_info.size() > 0) {
+            textView_denik = (TextView) (view.findViewById(R.id.textView_denik));
+
+            String trainingStr = "";
+            for (Training training : m_training_info) {
+                trainingStr += (training.performedOn + ",");
+            }
+            textView_denik.setText(trainingStr);
+        }
 
         /*int rid = R.id.denikTableLayout;
         TabLayout table = view.findViewById(rid);
