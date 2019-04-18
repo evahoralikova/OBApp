@@ -19,9 +19,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" android:id="@+id/textView24"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                    android:fontFamily="sans-serif"
-                    android:textSize="30sp" android:textAlignment="center"
+                    android:fontFamily="monospace"
+                    android:textSize="36sp" android:textAlignment="center"
                     android:textColor="@android:color/holo_orange_dark"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView15"/>
             <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -31,9 +34,10 @@
                         android:layout_height="match_parent">
                     <TextView
                             android:text="Datum"
-                            android:layout_width="wrap_content"
+                            android:layout_width="206dp"
                             android:layout_height="wrap_content" android:id="@+id/textView19"
-                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"/>
+                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"
+                            android:typeface="monospace"/>
                 </TableRow>
                 <TableRow
                         android:layout_width="match_parent"
@@ -54,7 +58,7 @@
                             android:text="Čas"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:id="@+id/textView20"
-                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"/>
+                            android:fontFamily="monospace" android:textSize="24sp" android:textAlignment="center"/>
                 </TableRow>
                 <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
                     <android.support.design.widget.TextInputLayout
@@ -72,7 +76,7 @@
                             android:text="Vzdálenost"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:id="@+id/textView21"
-                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"/>
+                            android:fontFamily="monospace" android:textSize="24sp" android:textAlignment="center"/>
                 </TableRow>
                 <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
                     <android.support.design.widget.TextInputLayout
@@ -91,7 +95,7 @@
                             android:text="Tempo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:id="@+id/textView23"
-                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"/>
+                            android:fontFamily="monospace" android:textSize="24sp" android:textAlignment="center"/>
                 </TableRow>
                 <TableRow
                         android:layout_width="match_parent"
@@ -114,7 +118,7 @@
                             android:text="Místo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" android:id="@+id/textView22"
-                            android:fontFamily="sans-serif" android:textSize="24sp" android:textAlignment="center"/>
+                            android:fontFamily="monospace" android:textSize="24sp" android:textAlignment="center"/>
                 </TableRow>
                 <TableRow
                         android:layout_width="match_parent"
@@ -135,7 +139,7 @@
                     android:text="Odeslat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" android:id="@+id/buttonSubmit"
-                    tools:layout_editor_absoluteY="519dp"/>
+                    tools:layout_editor_absoluteY="519dp" android:fontFamily="monospace"/>
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

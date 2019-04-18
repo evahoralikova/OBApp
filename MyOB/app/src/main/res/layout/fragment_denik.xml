@@ -8,14 +8,15 @@
         tools:context=".Main2Activity_denik">
 
     <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" android:layout_weight="1">
+            android:layout_width="369dp"
+            android:layout_height="match_parent" android:layout_weight="1" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp">
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:orientation="vertical">
             <TextView
                     android:text="Tréninkový deník"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     tools:layout_editor_absoluteY="33dp"
                     tools:layout_editor_absoluteX="61dp"
@@ -23,17 +24,21 @@
 
                     android:textAppearance="@style/TextAppearance.AppCompat.Display2"
                     android:layout_weight="1"
-                    android:textColor="@android:color/holo_orange_dark"/>
+                    android:textColor="@android:color/holo_orange_dark" android:fontFamily="monospace"
+                    android:textSize="36sp"/>
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/textView_denik"
                     android:layout_weight="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display2"/>
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display2" android:textSize="14sp"/>
             <Button
-                    android:layout_width="match_parent"
+                    android:layout_width="345dp"
                     android:layout_height="wrap_content" android:id="@+id/buttonAddTraining" android:layout_weight="1"
-                    android:text="Přidat"/>
+                    android:text="Přidat trénink" android:textAlignment="center" android:fontFamily="monospace"/>
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView16" android:layout_weight="1"/>
             <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" android:layout_weight="1" android:id="@+id/denikTableLayout">
@@ -41,25 +46,29 @@
                 <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
                     <TextView
                             android:text="datum"
-                            android:layout_width="wrap_content"
+                            android:layout_width="64dp"
                             android:layout_height="wrap_content" android:id="@+id/textView9"
-                            android:textAlignment="center"/>
+                            android:textAlignment="textStart" android:fontFamily="monospace" android:textSize="18sp"/>
                     <TextView
                             android:text="čas"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/textView3"/>
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content" android:id="@+id/textView3"
+                            android:textAlignment="textStart" android:fontFamily="monospace" android:textSize="18sp"/>
                     <TextView
                             android:text="délka"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/textView6"/>
+                            android:layout_width="63dp"
+                            android:layout_height="wrap_content" android:id="@+id/textView6"
+                            android:textAlignment="textStart" android:fontFamily="monospace" android:textSize="18sp"/>
                     <TextView
                             android:text="místo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/textView7"/>
+                            android:layout_width="99dp"
+                            android:layout_height="wrap_content" android:id="@+id/textView7"
+                            android:textAlignment="textStart" android:fontFamily="monospace" android:textSize="18sp"/>
                     <TextView
                             android:text="tempo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:id="@+id/textView8"/>
+                            android:layout_width="121dp"
+                            android:layout_height="match_parent" android:id="@+id/textView8"
+                            android:textAlignment="textStart" android:fontFamily="monospace" android:textSize="18sp"/>
                 </TableRow>
                 <TableRow android:layout_width="match_parent" android:layout_height="match_parent">
                     <TextView
